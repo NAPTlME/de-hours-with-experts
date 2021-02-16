@@ -6,14 +6,14 @@ def main():
 
 
 def isArraySorted(arr, desc = True):
-    n = len(arr)
-    if n == 1 or n == 0:
-        return True
-    
-    if desc:
-        return arr[0] >= arr[1] and isArraySorted(arr[1:], desc)
-    else:
-        return arr[0] <= arr[1] and isArraySorted(arr[1:], desc)
+    for i in range(1,len(arr)):
+        if desc:
+            if arr[i-1] < arr[i]:
+                return False
+        else:
+            if arr[i-1] > arr[i]:
+                return False
+    return True # if it gets to this point, we were unable to prove the array is not sorted
 
 def next_biggest_number(num):
     # convert to array
