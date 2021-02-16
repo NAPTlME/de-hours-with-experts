@@ -22,7 +22,7 @@ def next_biggest_number(num):
     returnVal = -1 # default to -1
     
     # iterate from length 2 to n looking at arrangement of right-most digits, 
-    # if not in decending order, then rearrange making n-? digit the first and then subsequent digits in ascending order
+    # if not in descending order, then rearrange making n-j digit the first and then subsequent digits in ascending order
     for i in range(2, n+1):
         array1 = numArray[0:(n-i)]
         array2 = numArray[(n-i):n] # array2 will always be at least of length 2
